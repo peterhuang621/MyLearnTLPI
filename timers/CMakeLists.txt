@@ -1,0 +1,8 @@
+link_libraries(lib)
+add_executable(real_timer real_timer.c)
+add_executable(timed_read timed_read.c)
+add_executable(t_nanosleep t_nanosleep.c)
+include_directories(. ../time)
+add_executable(ptmr_sigev_signal ptmr_sigev_signal.c itimerspec_from_str.c ../time/curr_time.c)
+add_executable(ptmr_sigev_thread ptmr_sigev_thread.c itimerspec_from_str.c ../time/curr_time.c)
+add_executable(demo_timerfd demo_timerfd.c itimerspec_from_str.c)

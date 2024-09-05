@@ -1,0 +1,6 @@
+link_libraries(lib)
+add_executable(t_unlink t_unlink.c)
+add_executable(list_files list_files.c)
+add_executable(nftw_dir_tree nftw_dir_tree.c)
+add_executable(view_symlink view_symlink.c)
+add_executable(t_dirbasename t_dirbasename.c)

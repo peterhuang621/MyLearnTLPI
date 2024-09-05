@@ -1,0 +1,5 @@
+add_library(fileslib SHARED file_perms.h file_perms.c)
+link_libraries(lib fileslib)
+add_executable(t_stat t_stat.c)
+add_executable(t_chown t_chown.c ../users_groups/ugid_functions.c ../users_groups/ugid_functions.h)
+add_executable(t_umask t_umask.c)
