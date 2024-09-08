@@ -1,0 +1,1 @@
+add_executable(simple_thread simple_thread.c ../lib/error_functions.c)
