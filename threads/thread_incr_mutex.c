@@ -4,17 +4,24 @@
 #include <pthread.h>
 
 static int glob = 0;
+static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
 
 static void *threadFunc(void *arg)
 {
 	int loops = *((int *)arg);
-	int loc, j;
+	int loc, j, s;
 	for (j = 0; j < loops; j++)
 	{
+		s = pthread_mutex_lock(&mtx);
+		if (s != 0)
+			errExitEN(s, "pthread_mutex_lock");
 		loc = glob;
 		loc++;
 		glob = loc;
 		// glob++; not work on arm64-Ubuntu22.04-macOS based
+		s = pthread_mutex_unlock(&mtx);
+		if (s != 0)
+			errExitEN(s, "pthread_mutex_unlock");
 	}
 	return NULL;
 }
