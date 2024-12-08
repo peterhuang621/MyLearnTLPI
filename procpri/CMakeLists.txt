@@ -1,0 +1,4 @@
+link_libraries(lib)
+add_executable(t_setpriority t_setpriority.c ../lib/error_functions.c ../lib/get_num.c)
+add_executable(sched_sc sched_set.c ../lib/get_num.c ../lib/error_functions.c)
+add_executable(sched_view sched_view.c ../lib/get_num.c ../lib/error_functions.c)
