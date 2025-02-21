@@ -1,0 +1,1 @@
+add_executable(dynload dynload.c ../lib/error_functions.c)
