@@ -4,3 +4,7 @@ add_executable(pmsg_create pmsg_create.c)
 add_executable(pmsg_getattr pmsg_getattr.c)
 add_executable(pmsg_receive pmsg_receive.c)
 add_executable(pmsg_send pmsg_send.c)
+add_executable(mq_notify_sig mq_notify_sig.c)
+
+add_executable(mq_notify_thread mq_notify_thread.c)
+target_link_libraries(mq_notify_thread pthread)
