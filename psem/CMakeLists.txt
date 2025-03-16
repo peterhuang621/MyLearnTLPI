@@ -1,3 +1,6 @@
 link_libraries(lib)
 add_executable(psem_create psem_create.c)
 add_executable(psem_unlink psem_unlink.c)
+add_executable(psem_wait psem_wait.c)
+add_executable(psem_post psem_post.c)
+add_executable(psem_getvalue psem_getvalue.c)
