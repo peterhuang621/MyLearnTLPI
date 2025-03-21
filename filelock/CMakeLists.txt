@@ -1,2 +1,5 @@
 link_libraries(lib)
 add_executable(t_flock t_flock.c ../time/curr_time.c ../lib/get_num.c)
+add_executable(i_fcntl_locking i_fcntl_locking.c)
+file(GLOB flock_files create_pid_file.* region_locking.*)
+add_library(flock SHARED ${flock_files})
