@@ -1,4 +1,3 @@
-#define _BSD_SOURCE
 #include "is_seqnum.h"
 #include <netdb.h>
 #define BACKLOG 50

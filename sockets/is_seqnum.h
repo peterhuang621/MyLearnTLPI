@@ -1,3 +1,4 @@
+#define _BSD_SOURCE
 #include "../lib/get_num.h"
 #include "../lib/tlpi_hdr.h"
 #include "read_line.h"
