@@ -51,7 +51,8 @@ static int inetPassiveSocket(const char *service, int type, socklen_t *addrlen, 
     hints.ai_family = AF_UNSPEC;
     hints.ai_flags = AI_PASSIVE;
 
-    s = getaddrinfo(NULL, service, &hints, &result);
+    // better use localhost instead NULL(0.0.0.0)
+    s = getaddrinfo("localhost", service, &hints, &result);
     if (s != 0)
         return -1;
 
@@ -84,6 +85,7 @@ static int inetPassiveSocket(const char *service, int type, socklen_t *addrlen, 
     }
     if (rp != NULL && addrlen != NULL)
         *addrlen = rp->ai_addrlen;
+    freeaddrinfo(result);
     return (rp == NULL) ? -1 : sfd;
 }
 
