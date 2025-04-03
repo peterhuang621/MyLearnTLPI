@@ -9,3 +9,5 @@ https://man7.org/tlpi/
 ## Skipped Chapters
 
 **System V semaphore, shared memory..., etc. (Chapter #47-48)**, since they're not widely used nowadays and should be substituted with better tools.
+
+**Sockets Advanced Chaptes**, since they're not widely used nowadays.
