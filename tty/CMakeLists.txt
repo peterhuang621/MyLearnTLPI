@@ -1,2 +1,5 @@
 link_libraries(lib)
+link_directories(.)
 add_executable(new_intr new_intr.c)
+add_executable(no_echo no_echo.c)
+add_executable(test_tty_functions test_tty_functions.c tty_functions.c)
