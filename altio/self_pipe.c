@@ -1,5 +1,6 @@
 
 #define _GNU_SOURCE
+#include "../lib/get_num.h"
 #include "../lib/tlpi_hdr.h"
 #include <fcntl.h>
 #include <signal.h>
